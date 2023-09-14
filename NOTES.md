@@ -34,7 +34,7 @@ python -m grpc_tools.protoc \
 * Split into 2 terminals
 * terminal 1 starts the server
 ```
-(venv) gitpod /workspace/python-microservices-with-grpc/recommendations (my-test) $ cd recommendations
+(venv) gitpod /workspace/python-microservices-with-grpc (my-test) $ cd recommendations
 (venv) gitpod /workspace/python-microservices-with-grpc/recommendations (my-test) $ python recommendations.py 
 
 ```
