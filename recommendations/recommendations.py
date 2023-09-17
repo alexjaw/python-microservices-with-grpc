@@ -71,6 +71,7 @@ def serve():
     # server.add_secure_port("[::]:443", creds)
     server.add_insecure_port("[::]:50051")
 
+    print("Starting server on port 50051...")
     server.start()
     server.wait_for_termination()
 
