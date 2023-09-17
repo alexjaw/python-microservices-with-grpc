@@ -1,3 +1,33 @@
+# 17 sept 2023 Docker tests
+Use docker-compose and pytest
+
+Error:
+`E   TypeError: required field "lineno" missing from alias` 
+
+Turnes out that pytest must be updated for python 3.11 that I currently use in gitpod. So, first update requirements.txt files and the run `docker-compose build`. After that tests worked as expected.
+```
+# Observe that you first must start the services in another terminal:
+# gitpod /workspace/python-microservices-with-grpc (my-test) $ docker-compose up
+(venv) gitpod /workspace/python-microservices-with-grpc/recommendations (my-test) $ docker-compose exec recommendations pytest recommendations_test.py 
+============================ test session starts ============================
+platform linux -- Python 3.11.5, pytest-7.4.2, pluggy-1.3.0
+rootdir: /service/recommendations
+collected 1 item                                                            
+
+recommendations_test.py .                                             [100%]
+
+============================= 1 passed in 0.05s =============================
+(venv) gitpod /workspace/python-microservices-with-grpc/recommendations (my-test) $ docker-compose exec marketplace pytest marketplace_integration_test.py
+ 
+============================ test session starts ============================
+platform linux -- Python 3.11.5, pytest-7.4.2, pluggy-1.3.0
+rootdir: /service/marketplace
+collected 1 item                                                            
+
+marketplace_integration_test.py .                                     [100%]
+
+============================= 1 passed in 0.03s =============================
+```
 # 17 sept 2023 Docker compose
 Docker compose allows you to work with your services from one yaml file.
 * Create the yaml file
