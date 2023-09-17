@@ -1,4 +1,19 @@
-# Next time - Tying It Together
+# 17 sept 2023 Tying It Together
+Here we run 2 microservices:
+1. `recommendation/recommendations.py` which provides book recommendations.
+1. `marketplace/marketplace.py`which is a Flask app that displays recommendations in the web browser.
+```
+python -m grpc_tools.protoc \
+    -I ../protobufs \
+    --python_out=. \
+    --grpc_python_out=. \
+    ../protobufs/recommendations.proto
+```
+## ImportError: cannot import name 'soft_unicode' from 'markupsafe'
+Fix with downgrading markupsafe (updated `requirements.txt`).
+```
+pip install markupsafe==2.0.1
+```
 
 # 14 sept 2023 Initial setup
 * Skipping docker for now
