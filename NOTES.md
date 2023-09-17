@@ -1,5 +1,7 @@
-# Next: Docker compose
-
+# 17 sept 2023 Docker compose
+Docker compose allows you to work with your services from one yaml file.
+* Create the yaml file
+* Bring up with `docker-compose up` - voilà!
 # 17 sept 2023 Production-ready python microservice
 * Build and test run recommendations docker `recommendations`
 * ...marketplace docker `marketplace`
