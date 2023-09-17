@@ -1,3 +1,12 @@
+# Next: Docker compose
+
+# 17 sept 2023 Production-ready python microservice
+* Build and test run recommendations docker `recommendations`
+* ...marketplace docker `marketplace`
+* Create docker network `microservices`
+* Update docker `marketplace`
+* Run the docker services and test that marketplace can communicate with recommendations - Yes!
+
 # 17 sept 2023 Tying It Together
 Here we run 2 microservices:
 1. `recommendation/recommendations.py` which provides book recommendations.
